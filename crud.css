@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(196, 196, 196);
+}
+
+.header .buton {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: rgb(3, 123, 228);
+  transition: all 0.3s ease-in-out;
+}
+
+.header .buton:hover {
+  color: #fff;
+  background-color: rgb(5, 110, 202);
+}
+
+.menu {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 1.5rem;
+}
+
+section.section {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+}
+
+.red {
+  background-color: rgb(201, 1, 1) !important;
+}
+
+.red:hover {
+  background-color: rgb(182, 3, 3) !important;
+}
