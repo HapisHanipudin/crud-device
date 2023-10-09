@@ -1,0 +1,390 @@
+@font-face {
+  font-family: "Qanelas";
+  src: url(../font/QanelasUltraLight.woff);
+}
+
+* {
+  /* margin: 0; */
+  padding: 0;
+  font-family: qanelas;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* ====== NAVBAR ===== */
+/* header {
+  display: flex;
+}
+
+.logo {
+  width: 100%;
+  margin: 12px 0px 0px 75px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  display: flex;
+  margin-left: 33%;
+  align-items: center;
+}
+
+.ul-nav {
+  display: flex;
+  list-style: none;
+}
+
+.ul-nav .li-nav {
+  margin: 25px 20px;
+}
+
+.li-nav a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.li-nav a:hover {
+  color: #d99374;
+}
+
+.login {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-nav {
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 33px;
+  width: 87px;
+  margin: 8px 77px;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: white;
+  border-radius: 41px 41px 41px 41px;
+  -webkit-border-radius: 41px 41px 41px 41px;
+  -moz-border-radius: 41px 41px 41px 41px;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.btn-nav .btn-login a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-login:hover {
+  border: 2px solid #d99374;
+}
+
+.btn-login:hover a {
+  color: #d99374;
+} */
+/* ===== NAVBAR ===== */
+
+/* ===== CONTACTS===== */
+.contacts {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 80px;
+}
+
+.contacts > div {
+  background-color: whitesmoke;
+  padding: 20px 0;
+  margin-left: 50px;
+  width: 350px;
+  height: 170px;
+  box-shadow: 6px 6px 14px -7px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 6px 6px 14px -7px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 6px 6px 14px -7px rgba(0, 0, 0, 0.6);
+}
+
+.ct-h1 {
+  margin: 125px 0px 30px 125px;
+  font-size: 38px;
+}
+
+.anggota h1 {
+  margin-left: 30px;
+}
+
+.anggota p {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.anggota img {
+  display: flex;
+  padding-top: 1px;
+  margin-right: 5px;
+  width: 20px;
+  text-decoration: none !important;
+}
+
+.anggota a {
+  display: flex;
+  margin-left: 30px;
+  text-decoration: 1px underline;
+  color: #d99374;
+  margin-top: 50px;
+  width: 20px;
+}
+
+.anggota a:hover {
+  color: black;
+}
+/* ===== CONTACTS===== */
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #d99374;
+  width: 100%;
+  height: 1100px;
+  margin-top: 170px;
+}
+
+.konten-footer {
+  padding: 120px 80px 0px 80px;
+}
+
+.footer-atas {
+  position: relative;
+}
+
+.footer-atas h1 {
+  display: flex;
+  font-size: 100px;
+  padding: 13px 0px 0px 10px;
+  color: white;
+}
+
+.btn-footer {
+  display: inline-block;
+  position: absolute;
+  top: 17%;
+  left: 75%;
+  width: 18%;
+  height: 58px;
+  background-color: transparent;
+  border-radius: 41px 41px 41px 41px;
+  -webkit-border-radius: 41px 41px 41px 41px;
+  -moz-border-radius: 41px 41px 41px 41px;
+  border: 2px solid white;
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.btn-footer:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-footer a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+}
+
+.btn-footer:hover a {
+  color: black;
+}
+
+hr {
+  text-align: center;
+  width: 95%;
+  margin-left: 15px;
+  margin-top: 50px;
+}
+
+.footer-tengah {
+  display: flex;
+}
+
+.tengah-kiri {
+  display: flex;
+}
+
+.ul-pertama {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 80px;
+}
+
+.ul-1 {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+}
+
+.li-judul {
+  padding-bottom: 30px;
+  font-weight: bolder;
+  font-size: 18px;
+  font-family: "Qanelas";
+  src: url(qanelas-cufonfonts-webfont/QanelasExtraBold.woff) !important;
+}
+
+.li-1 {
+  padding-bottom: 35px;
+}
+
+.li-1 a {
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+.li-1 a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.li-1 a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.ul-kedua {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 15px;
+}
+
+.tengah-kanan {
+  display: flex;
+}
+
+.ul-pertama-kanan {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 650px;
+}
+
+.ul-kedua-kanan {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 75px;
+}
+
+a img {
+  font-size: 7px;
+}
+
+.footer-bawah {
+  margin-top: 80px;
+}
+
+.tengah-atas {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  color: white;
+  height: fit-content;
+}
+
+.tengah-atas > div {
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+.tengah-atas a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.tengah-atas a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.tengah-atas a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.item1 {
+  display: inline-block;
+  margin: 15px 0px 0px 17px;
+  text-align: left;
+}
+
+.item2 {
+  display: inline-block;
+  margin: 15px 0px 0px 0px;
+  text-align: left;
+}
+
+.item3 {
+  display: inline-block;
+  margin: 15px 0px 0px 0px;
+  text-align: center;
+}
+
+.item4 {
+  display: inline-block;
+  margin: 15px 0px 0px 0px;
+  text-align: center;
+}
+
+.ul-tb {
+  display: flex;
+  margin-left: 20px;
+}
+
+.li-tb {
+  display: flex;
+  margin: 0px 180px 0px 0px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.li-tb a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.li-tb a img {
+  width: fit-content;
+  height: 100px;
+}
+
+/* ===== FOOTER ===== */
