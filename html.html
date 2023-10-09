@@ -1,98 +1,205 @@
-<?php include 'auth.php' ?>
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navfooter.css" />
-  </head>
-  <body>
-    <nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="navfooter.css">
+</head>
+<body>
+      <nav class="navigation nav-scrolled">
       <header>
         <div class="btn-link" data-link="">
           <h1 class="logo">Izalin</h1>
         </div>
 
         <div class="menu">
-          <span>Blog</span>
-          <span>Contact</span>
+<span class="btn-link" data-link="blog/">Blog</span>
+<span class="btn-link" data-link="contact/">Contact</span>
         </div>
 
         <div class="button">
           <?php if (!empty($username)) { ?>
           <!-- Tampilkan username jika sudah login -->
-          <span>au</span>
+          <span><?php echo $username ?></span>
+          <button class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></button>
           <button class="dropdown">
-            <span>Log Out</span>
+            <span>Account</span>
             <div class="dropdown-menu">
-              <a href="">Account Setting</a>
-              <a class="red" href="logout/">Logout</a>
+              <a href="accsetting/?id=<?php echo $userId ?>">Account Setting</a>
+              <a class="red" href="logout.php">Logout</a>
             </div>
           </button>
           <?php } else { ?>
           <!-- Tampilkan tombol login/sign up jika belum login -->
-          <button>
-            <a class="btn-link" data-link="login/">Log in/Sign Up</a>
+          <button class="dropdown">
+            <span>Get Started</span>
+            <div class="dropdown-menu">
+              <a href="login/">Log In</a>
+              <a class="" href="register/">Sign Up</a>
+            </div>
           </button>
           <?php } ?>
         </div>
       </header>
     </nav>
-    <section id="hero">
-      <div class="hero-side male">
-        <div class="blur"></div>
-        <div class="inner-hero">
-          <div class="link">
-            <div class="hero-link">
-              <div class="hero-img">
-                <img class="" src="img/male/shirt.jpg" alt="" />
-              </div>
-              <button class="btn-link" data-link="shirts-men">Shirts</button>
+
+<div class="cart">
+  <div class="close"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></div>
+  <div class="mycart">
+    <div class="cart-img">
+      <img src="uploads/65240413389c65.81932217_Petunia Pink.jpg" alt="">
+    </div>
+    <div class="cartxt">
+      <h3>Nama Prodak</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, pariatur.</p>
+      <p>Harga : 3</p>
+      <p>Jumlah : 3</p>
+    </div>
+  </div>
+
+</div>    
+
+    <main>
+
+    </main>
+
+
+        <footer>
+        <div class="konten-footer">
+            <div class="footer-atas">
+                <h1>AYO MULAI HIDUPMU <br> DENGAN BERPAKAIAN SYAR'I</h1>
+
+                <button class="btn-footer">
+                    <a href="">Memulai</a>
+                </button>
             </div>
-            <div class="hero-link">
-              <div class="hero-img">
-                <img class="" src="img/male/pants.jpg" alt="" />
-              </div>
-              <button class="btn-link" data-link="pants-men">Pants</button>
-            </div>
-            <div class="hero-link">
-              <div class="hero-img">
-                <img class="" src="img/male/shoes.jpg" alt="" />
-              </div>
-              <button class="btn-link" data-link="shoes-men">Shoes</button>
-            </div>
-          </div>
+            <hr>
+            
+            <div class="footer-tengah">
+                <div class="tengah-kiri">
+                    <div class="ul-pertama">
+                        <ul class="ul-1">
+                            <li class="li-judul">Untuk Pria</li>
+                            <li class="li-1">
+                                <a href="#">Baju (Pria)</a>
+                            </li>
+                            <li class="li-1">
+                                <a href="#">Celana (Pria)</a>
+                            </li>
+                            <li class="li-1">
+                                <a href="#">Sepatu (Pria)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ul-kedua">
+                        <ul class="ul-1">
+                            <li class="li-judul">Untuk Wanita</li>
+                            <li class="li-1">
+                                <a href="#">Hijab (Wanita)</a>
+                            </li>
+                            <li class="li-1">
+                                <a href="#">Gamis (Wanita)</a>
+                            </li>
+                            <li class="li-1">
+                                <a href="#">Rok (Wanita)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tengah-kanan">
+                        <div class="ul-pertama-kanan">
+                            <ul class="ul-1">
+                                <li class="li-judul">Contacts</li>
+                                <li class="li-1">
+                                    <a href="https://www.instagram.com/hudzaifaa_/"><img src="../img/icon/ig.png" alt=""> @hudzaifaa_
+                                        (Hudzaifa)</a>
+                                </li>
+                                <li class="li-1">
+                                    <a href="https://www.instagram.com/hapishanipudin/"><img src="../img/icon/ig.png" alt=""> @hapishanipudin
+                                        (Udin)</a>
+                                </li>
+                                <li class="li-1">
+                                    <a href="https://www.instagram.com/alyadibaa/"><img src="../img/icon/ig.png" alt=""> @alyadibaa (Alya)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <div class="ul-kedua-kanan">
+                            <ul class="ul-1">
+                                <li class="li-judul">Blog</li>
+                                <li class="li-1">
+                                    <a href="#">Jualan Baju Syar'i</a>
+                                </li>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    </div>
+
+                    <hr>
+                    
+                    <div class="tengah-atas">
+                        <div class="item1">
+                            <a href="https://shopee.co.id/">Shopee</a>
+                        </div>
+                        <div class="item2">
+                            <a href="https://www.tokopedia.com/">Tokopedia</a>
+                        </div>
+                        <div class="item3">
+                            <a href="https://www.bukalapak.com/">Bukalapak</a>
+                        </div>
+                        <div class="item4">
+                            <a href="https://www.lazada.co.id/">Lazada</a>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="footer-bawah">
+                        
+                        <div class="tengah-bawah">
+                            <ul class="ul-tb">
+                                <li class="li-tb">
+                                    <a href="#">Izalin.</a>
+                                </li>
+                                <li class="li-tb">
+                                    <a href="https://www.sekolahimpian.com/">
+                                        <img src="../img/SI.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="li-tb">
+                                    <a href="https://www.sekolahimpian.com/">
+                                        <img src="../img/qbs.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="li-tb">
+                                    <a href="https://www.sekolahimpian.com/">
+                                        <img src="../img/fq.png" alt="">
+                                    </a>
+                                </li>
+                                <li class="li-tb">
+                                    <a href="https://www.stfq.org/">
+                                        <img src="../img/stfq.png" alt="">
+                                    </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+                
+
+
+
         </div>
-      </div>
-      <div class="hero-side female">
-        <div class="blur"></div>
-        <div class="inner-hero">
-          <div class="link">
-            <div class="hero-link">
-              <div class="hero-img">
-                <img class="" src="img/female/hijab.jpg" alt="" />
-              </div>
-              <button class="btn-link" data-link="hijab-women">Hijab</button>
-            </div>
-            <div class="hero-link">
-              <div class="hero-img">
-                <img class="" src="img/female/pants.jpg" alt="" />
-              </div>
-              <button class="btn-link" data-link="shirts-women">Shirts</button>
-            </div>
-            <div class="hero-link">
-              <div class="hero-img">
-                <img class="" src="img/female/shoes.jpg" alt="" />
-              </div>
-              <button class="btn-link" data-link="skirt-women">Skirts</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        
+
+        
+    </footer>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

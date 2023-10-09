@@ -26,3 +26,15 @@ dropBtn.forEach((btn) => {
 //     navbar.classList.remove("nav-scrolled");
 //   }
 // });
+
+const cartBtn = document.querySelector(".cart-btn");
+const cart = document.querySelector(".cart");
+const closeBtn = cart.querySelector(".close");
+
+cartBtn.addEventListener("click", () => {
+  cart.classList.toggle("show");
+});
+
+closeBtn.addEventListener("click", () => {
+  cart.classList.toggle("show");
+});

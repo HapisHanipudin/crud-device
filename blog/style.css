@@ -434,18 +434,21 @@
 }
 
 .card-news .card-img {
-  object-fit: cover;
   overflow: hidden;
   width: 100%;
-  padding-bottom: 59%;
-  height: 0;
+  height: 200px; /* Set a fixed height for the image container */
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
 }
 
 .card-img img {
-  object-fit: cover;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  width: 100%;
+  height: 100%; /* Use 100% height to fill the container */
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
 }
 
 /* .card-news2 {

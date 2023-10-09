@@ -33,7 +33,7 @@ include '../config.php';
           </div>
         </div>
 
-        <div class="product">
+        <!-- <div class="product">
           <div class="body-p">
             <a href="">BAJU</a>
           </div>
@@ -55,9 +55,9 @@ include '../config.php';
           <div class="ar-p">
             <a href="">SEMUA PAKAIAN</a>
           </div>
-        </div>
+        </div> -->
 
-        <div class="blog-poster">
+        <!-- <div class="blog-poster">
           <div class="img-blog">
             <div class="poster-btn">
               <button class="btn-blog" id="btn-blog1">
@@ -79,7 +79,7 @@ include '../config.php';
               <p>02 OKTOBER 2023</p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- ===== BLOG ===== -->
@@ -95,10 +95,10 @@ include '../config.php';
             $result = mysqli_query($conn, $sql);
 
 
-            if (mysqli_num_rows($result) >
-        0) { while ($row = mysqli_fetch_assoc($result)) { echo '<a href="post.php?id=' .  $row['post_id'] . '" class="card-news">
+            if (mysqli_num_rows($result) > 0) { while ($row = mysqli_fetch_assoc($result)) { 
+          echo '<a href="post.php?id=' .  $row['post_id'] . '" class="card-news">
           <div class="card-img">
-            <img src="' . $row['post_img'] . '" alt="" />
+            <img src="../uploads/' . $row['post_img'] . '" alt="" />
           </div>
 
           <div>

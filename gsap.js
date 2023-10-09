@@ -308,6 +308,18 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
+    gsap.to(el.querySelector(".price"), {
+      y: 0,
+      ease: "none",
+      scrollTrigger: {
+        containerAnimation: scrollTween,
+        trigger: el.querySelector(".quote"),
+        start: "top bottom",
+        end: "+=30%",
+        scrub: 0.9,
+      },
+    });
+
     gsap.to(el.querySelector(".nickname"), {
       y: 0,
       ease: "none",

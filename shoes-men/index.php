@@ -1,4 +1,20 @@
-<?php include '../auth.php' ?>
+<?php 
+include '../auth.php';
+include '../config.php';
+
+            // Ambil data dari tabel crud_device
+            $sql = "SELECT `product_id`, `product_name1`, `product_name2`, `product_image`, `product_category`, `product_desc`, `product_price`
+                    FROM `product`
+                    WHERE `product_category` = 'shoes-men'";
+            $result = mysqli_query($conn, $sql);
+
+// Hitung jumlah baris yang ditemukan
+$numRows = mysqli_num_rows($result);
+
+// Lebar wrapper = (jumlah baris + 1) * 100%
+$wrapperWidth = ($numRows + 1) * 100;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -93,12 +109,31 @@
     </section> -->
 
     <div class="container-slider">
-      <div class="wrapper">
+      <div class="wrapper" style="width: <?php echo $wrapperWidth; ?>%;">
         <section class="section intro">
           <div class="line"></div>
         </section>
 
-        <section class="section shirt character">
+        <?php
+
+            if (mysqli_num_rows($result) > 0) { while ($row = mysqli_fetch_assoc($result)) { 
+          echo '
+        <section class="section shirt character" id="'. $row['product_id'] .'">
+          <div class="block"></div>
+          <img src="../uploads/'. $row['product_image'] . '" alt="" /><span class="huge-text">'. $row['product_name1'] . $row['product_name2'] . '</span>
+
+          <div class="nickname"><span>'. $row['product_name1'] . '</span>'. $row['product_name2'] . '</div>
+          <div class="price">
+            <h3 class="h3">Rp' . $row['product_price'] . '</h3>
+            <a class="tocart" href="../addtocart.php?id='.$row['product_id'].'">Add To Cart</a>
+          </div>
+          <div class="quote">'. $row['product_desc'] . '</div>
+        </section>
+          '; } } else { echo '
+          <h2 style="opacity: 70%">Belum Ada Kontent untuk ditampilkan</h2>
+          '; } ?>
+
+        <!-- <section class="section shirt character">
           <div class="block"></div>
           <img src="img/white_shirt-removebg-preview.png" alt="" /><span class="huge-text">White shirt</span>
 
@@ -112,7 +147,7 @@
 
           <div class="nickname"><span>Royal</span>stripe</div>
           <div class="quote">Our Royal Stripe Shirt epitomizes sophistication</div>
-        </section>
+        </section> -->
       </div>
     </div>
 

@@ -72,13 +72,13 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="mb-3">
                 <label for="IsiBlog" class="form-label">Isi</label>
-                <input name="isi" type="text" class="form-control" id="IsiBlog" placeholder="isi Blog"/>
-            </div>
-            <div class="mb-3">
-                <label for="DeviceCategory" class="form-label">Gambar</label>
-                <input type="file" name="foto" required="required">
+                <textarea class="form-control" name="isi" id="IsiBlog" rows="3" placeholder="isi Blog"></textarea>
             </div>
 
+            <div class="mb-3">
+                <label for="gambar" class="form-label">Gambar</label>
+                <input class="form-control" type="file" name="foto" id="gambar">
+            </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="checkbox1" required/>
                 <label class="form-check-label" for="checkbox1">Konfirmasi</label>

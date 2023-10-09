@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Qanelas";
+  src: url(../font/QanelasUltraLight.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: qanelas;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.gambar {
+  margin: 70px 0px 0px 0px;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+a h1 {
+  font-size: 25px;
+  display: inline-block;
+}
+
+.judul {
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-family: "Qanelas" !important;
+  src: url(qanelas-cufonfonts-webfont/QanelasExtraBold.woff) !important;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.tgl {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+p {
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.desc {
+  margin: 70px 0px 0px 0px;
+  align-items: center;
+  text-align: center;
+}
+
+.jlkn {
+  color: cadetblue;
+}
+
+.kata {
+  font-size: 20px !important;
+  font-family: "Qanelas" !important;
+  src: url(qanelas-cufonfonts-webfont/QanelasExtraBold.woff) !important;
+  font-weight: 900 !important;
+}
