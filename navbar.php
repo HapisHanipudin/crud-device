@@ -36,18 +36,36 @@
       </header>
     </nav>
 
-    <div class="cart">
+<div class="cart">
   <div class="close"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></div>
+
+<?php 
+$sql = "SELECT p.*, c.*
+            FROM `product` AS p
+            INNER JOIN `cart` AS c ON c.product_id = p.product_id
+            WHERE c.`user_id` = '$userId'";
+    $result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) { while ($row = mysqli_fetch_assoc($result)) { 
+          echo '
   <div class="mycart">
     <div class="cart-img">
-      <img src="uploads/65240413389c65.81932217_Petunia Pink.jpg" alt="">
+      <img src="../uploads/'. $row['product_image'] .'" alt="">
     </div>
     <div class="cartxt">
-      <h3>Nama Prodak</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, pariatur.</p>
-      <p>Harga : 3</p>
-      <p>Jumlah : 3</p>
+      <h3>'. $row['product_name1'] . $row['product_name2'].'</h3>
+      <p>'. $row['product_desc'] .'.</p>
+      <p>Harga : '. $row['product_price'] .'</p>
+      <p>Jumlah : '. $row['quantity'] .'</p>
     </div>
   </div>
+
+        '; } } else { echo '
+          <h2 style="opacity: 70%">Belum Ada Barang untuk ditampilkan</h2>
+          '; }
+
+?>
+
+</div>    
 
 </div>    
