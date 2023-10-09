@@ -1,4 +1,7 @@
-<?php include 'auth.php' ?>
+<?php 
+include 'auth.php'; 
+include 'config.php'; 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
