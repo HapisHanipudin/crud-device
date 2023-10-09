@@ -413,4 +413,6 @@ a img {
 .cart-btn {
   background-color: transparent;
   padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #fff;
 }

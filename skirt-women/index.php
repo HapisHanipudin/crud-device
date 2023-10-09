@@ -5,7 +5,7 @@ include '../config.php';
             // Ambil data dari tabel crud_device
             $sql = "SELECT `product_id`, `product_name1`, `product_name2`, `product_image`, `product_category`, `product_desc`, `product_price`
                     FROM `product`
-                    WHERE `product_category` = 'shirts-women'";
+                    WHERE `product_category` = 'skirts-women'";
             $result = mysqli_query($conn, $sql);
 
 // Hitung jumlah baris yang ditemukan
